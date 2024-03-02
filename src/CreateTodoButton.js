@@ -1,6 +1,16 @@
+import { motion } from "framer-motion"
+
 function CreateTodoButton(){
     return(
-        <h1> Has completado 1 de 5 To do</h1>
+        <div>
+        <motion.button
+        whileHover={{scale:1.2}}
+        whileTap={{scale: 0.9, position:10}}
+        
+        >
+            Camilo
+        </motion.button>
+        </div>
     );
 
 }

@@ -1,6 +1,8 @@
-function TodoList(){
+function TodoList(props){
     return(
-        <h1> Has completado 1 de 5 To do</h1>
+        <ul>
+            {props.children}
+        </ul>
     );
 
 }
