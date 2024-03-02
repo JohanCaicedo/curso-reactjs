@@ -2,7 +2,7 @@ import './css/TodoSearch.css'
 function TodoSearch(){
     return(
         <div className='botonSearch'>
-        <input placeholder="Busca ToDO"/>
+        <input placeholder="¿Que quieres buscar?"/>
         </div>
     );
 
