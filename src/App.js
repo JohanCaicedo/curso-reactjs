@@ -5,6 +5,8 @@ import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
 import { TodoItem } from "./TodoItem";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const defaultTodos =[
   {text:'Terminar esta linea', complited:true},
