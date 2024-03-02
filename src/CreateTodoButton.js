@@ -1,18 +1,14 @@
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
+import './css/CreateTodoButton.css';
 
-function CreateTodoButton(){
-    return(
+function CreateTodoButton() {
+    return (
         <div>
-        <motion.button
-        whileHover={{scale:1.2}}
-        whileTap={{scale: 0.9, position:10}}
-        
-        >
-            Camilo
-        </motion.button>
+            <button className="CreateTodoButton">
+                +
+            </button>
         </div>
     );
-
 }
 
-export {CreateTodoButton}
+export { CreateTodoButton };

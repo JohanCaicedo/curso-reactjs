@@ -1,0 +1,26 @@
+.CreateTodoButton {
+    background-color: #F25116;
+    border: none;
+    font-size: 50px;
+    border-radius: 50%;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    height: 64px;
+    width: 64px; /* Hice corrección aquí */
+    color: #F2ECE9;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    transform: rotate(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center; /* Establece el origen de la transformación en el centro */
+    
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+.CreateTodoButton:hover {
+    transform: rotate(360deg);
+}
