@@ -6,7 +6,8 @@ import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
 import { TodoItem } from "./TodoItem";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import './css/index.css';
+// import { Container, Row, Col } from "react-bootstrap"; importa las vainas de boostrap
 
 const defaultTodos = [
   { text: "Terminar esta linea", complited: true },
@@ -18,31 +19,22 @@ const defaultTodos = [
 
 function App() {
   return (
-    <>
-      <Container>
-        <Row>
-          <Col xs={12} md={6}>
-            <div className="d-flex flex-column align-items-center">
-              <TodoCounter complited={16} total={60} />
-              <TodoSearch />
-            </div>
-          </Col>
-
-          <Col xs={12} md={6} className="d-flex flex-column align-items-center justify-content-end">
-            <TodoList>
-              {defaultTodos.map((todo) => (
-                <TodoItem
-                  key={todo.text}
-                  text={todo.text}
-                  complited={todo.complited}
-                />
-              ))}
-            </TodoList>
-            <CreateTodoButton/>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <React.Fragment>
+      <div  className="app-container">
+      <TodoCounter complited={16} total={60} />
+      <TodoSearch />
+      <TodoList>
+        {defaultTodos.map((todo) => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            complited={todo.complited}
+          />
+        ))}
+      </TodoList>
+      <CreateTodoButton />
+      </div>
+    </React.Fragment>
   );
 }
 

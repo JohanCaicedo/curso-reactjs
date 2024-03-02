@@ -1,6 +1,13 @@
-h1{
-    font-size: 24px;
+.TodoCounter{
+    font-size: 34px;
     text-align: center;
     margin: 0;
     padding: 48px;
+    color: #262626;
+}
+
+.TodoCounter span{
+    font-weight: bold;
+    color: #A62103;
+
 }

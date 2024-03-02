@@ -1,19 +1,40 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 body {
   margin: 0;
-  font-family: 'Libre Franklin', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Catamaran';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
+
+}
+/* Definiciones de fonts */
+
+.catamaran-00 {
+  font-family: "Catamaran", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.font-span-shortsM {
-  font-family: 'Sorts Mill Goudy', serif;
-} */
+.athiti-regular {
+  font-family: "Athiti", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center; /* Alinea horizontalmente al centro */
+  align-items: center; /* Alinea verticalmente al centro */
+  flex-direction: column; /* Cambia la dirección a una columna */
+  height: 100vh; /* Opcional: ajusta la altura al 100% del viewport */
+}
