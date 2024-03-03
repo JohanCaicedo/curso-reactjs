@@ -1,3 +1,7 @@
-.botonSearch{
-    display: flex;
+.BotonSearch{
+    
+}
+
+.BotonSearch:placeholder{
+    color: blue;
 }
