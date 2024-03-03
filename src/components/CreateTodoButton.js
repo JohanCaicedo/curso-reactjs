@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import './css/CreateTodoButton.css';
+import '../styles/CreateTodoButton.css';
 
 function CreateTodoButton() {
     

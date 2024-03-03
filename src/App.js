@@ -1,11 +1,22 @@
-import React from "react";
-import "./css/App.css";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { CreateTodoButton } from "./CreateTodoButton";
-import { TodoItem } from "./TodoItem";
-import "./css/index.css";
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { TodoCounter } from './components/TodoCounter';
+import { TodoSearch } from './components/TodoSearch';
+import { TodoList } from './components/TodoList';
+import { CreateTodoButton } from './components/CreateTodoButton';
+import { TodoItem } from './components/TodoItem';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
 
 const defaultTodos = [
   { text: "Terminar esta linea", completed: true },
@@ -15,15 +26,23 @@ const defaultTodos = [
   { text: "Hacer la ilustracón del 8M", completed: false },
 ];
 
+
 function App() {
   return (
     <React.Fragment>
-      <div className="app-container">
-        <div className="left-column">
-          <TodoCounter completed={16} total={60} />
-          <TodoSearch />
-        </div>
-        <div className="right-colum todo-list-container">
+      <Box sx={{ width: '100%' }}>
+        <Grid container spacing={3}>
+          <Grid item xs={8}>
+            <TodoCounter completed={16} total={60} />
+            <TodoSearch/>
+          </Grid>
+          <Grid item xs={4}>
+            
+          </Grid>
+          <Grid item xs={4}>
+             <CreateTodoButton />
+          </Grid>
+          <Grid item xs={8}>
           <TodoList>
             {defaultTodos.map((todo) => (
               <TodoItem
@@ -33,11 +52,12 @@ function App() {
               />
             ))}
           </TodoList>
-          <CreateTodoButton />
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Box>
     </React.Fragment>
   );
+
 }
 
 export default App;
