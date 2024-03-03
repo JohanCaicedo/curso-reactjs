@@ -4,9 +4,8 @@ import { TodoCounter } from "./TodoCounter";
 import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
-import {TodoItem} from './TodoItem';
-import './css/index.css';
-
+import { TodoItem } from "./TodoItem";
+import "./css/index.css";
 
 const defaultTodos = [
   { text: "Terminar esta linea", completed: true },
@@ -19,19 +18,23 @@ const defaultTodos = [
 function App() {
   return (
     <React.Fragment>
-      <div  className="app-container">
-      <TodoCounter completed={16} total={60} />
-      <TodoSearch />
-      <TodoList>
-        {defaultTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-          />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
+      <div className="app-container">
+        <div className="left-column">
+          <TodoCounter completed={16} total={60} />
+          <TodoSearch />
+        </div>
+        <div className="right-colum todo-list-container">
+          <TodoList>
+            {defaultTodos.map((todo) => (
+              <TodoItem
+                key={todo.text}
+                text={todo.text}
+                completed={todo.completed}
+              />
+            ))}
+          </TodoList>
+          <CreateTodoButton />
+        </div>
       </div>
     </React.Fragment>
   );

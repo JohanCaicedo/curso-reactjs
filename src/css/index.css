@@ -10,8 +10,8 @@ body {
   margin: 0 24px;
   position: relative;
   min-height: 100vh;
-
 }
+
 /* Definiciones de fonts */
 
 .catamaran-00 {
@@ -20,6 +20,7 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+
 .montserrat-300 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -35,8 +36,22 @@ body {
 
 .app-container {
   display: flex;
-  justify-content: center; /* Alinea horizontalmente al centro */
+  justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor con el espacio entre ellos */
   align-items: center; /* Alinea verticalmente al centro */
-  flex-direction: column; /* Cambia la dirección a una columna */
-  height: 100vh; /* Opcional: ajusta la altura al 100% del viewport */
+}
+
+.left-column{
+  flex: 0 0 auto; /* La columna izquierda no crece ni se encoge, se mantiene a su ancho original */
+}
+
+.right-column{
+  flex: 1; /* La columna derecha ocupa todo el espacio disponible */
+}
+
+
+.todo-list-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ajusta la altura al 100% del viewport */
 }
