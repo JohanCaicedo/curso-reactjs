@@ -4,10 +4,9 @@ import { TodoCounter } from "./TodoCounter";
 import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
-import { TodoItem } from "./TodoItem";
-import "bootstrap/dist/css/bootstrap.min.css";
+import {TodoItem} from './TodoItem';
 import './css/index.css';
-// import { Container, Row, Col } from "react-bootstrap"; importa las vainas de boostrap
+import './css/index.css'
 
 const defaultTodos = [
   { text: "Terminar esta linea", complited: true },
