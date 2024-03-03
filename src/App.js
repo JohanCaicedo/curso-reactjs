@@ -6,28 +6,28 @@ import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
 import {TodoItem} from './TodoItem';
 import './css/index.css';
-import './css/index.css'
+
 
 const defaultTodos = [
-  { text: "Terminar esta linea", complited: true },
-  { text: "Terminar curso React.js", complited: false },
-  { text: "Hacer los cambios a la pagina de la red", complited: false },
-  { text: "Hacer el portafolio", complited: false },
-  { text: "Hacer la ilustracón del 8M", complited: false },
+  { text: "Terminar esta linea", completed: true },
+  { text: "Terminar curso React.js", completed: false },
+  { text: "Hacer los cambios a la pagina de la red", completed: false },
+  { text: "Hacer el portafolio", completed: false },
+  { text: "Hacer la ilustracón del 8M", completed: false },
 ];
 
 function App() {
   return (
     <React.Fragment>
       <div  className="app-container">
-      <TodoCounter complited={16} total={60} />
+      <TodoCounter completed={16} total={60} />
       <TodoSearch />
       <TodoList>
         {defaultTodos.map((todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}
-            complited={todo.complited}
+            completed={todo.completed}
           />
         ))}
       </TodoList>
