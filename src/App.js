@@ -35,6 +35,8 @@ function App() {
           <Grid item xs={8}>
             <TodoCounter completed={16} total={60} />
             <TodoSearch/>
+            <div><p>Carlos calerol a muerto</p></div>
+            <div><p>Esto es una prueba desde el PC y funciona super mega bien </p></div>
           </Grid>
           <Grid item xs={4}>
             
