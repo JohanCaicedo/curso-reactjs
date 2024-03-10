@@ -1,20 +1,19 @@
 import "./css/TodoItem.css";
+import { MdCheckCircle } from "react-icons/md";
+import { MdHighlightOff } from "react-icons/md";
+
 function TodoItem(props) {
   return (
     <li className="TodoItem">
-      <span
+      <MdCheckCircle
         onClick={props.onCompleted}
         className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
-      >
-        V
-      </span>
+      />
+
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
       </p>
-      <span 
-        className="Icon Icon-delete"
-        onClick={props.onDelete}
-      >X</span>
+      <MdHighlightOff className="Icon Icon-delete" onClick={props.onDelete} />
     </li>
   );
 }
