@@ -1,22 +1,54 @@
+import React from 'react';
 import './css/TodoCounter.css';
-import './css/index.css'
+import './css/index.css';
+
+function TodoCounter({ total, completed }) {
+  return (
+    <>
+      {completed === total ? (
+        <h1 className='catamaran-500 TodoCounter'>
+          ¡Felicidades! has completado todas tus tareas pendientes
+        </h1>
+      ) : (
+        <h1 className='catamaran-500 TodoCounter'>
+          Has completado <span>{completed}</span> de <span>{total}</span> Todos
+        </h1>
+      )}
+    </>
+  );
+}
+
+export { TodoCounter };
 
 
 
-function TodoCounter({total, completed}){
+
+
+
+
+
+
+
+
+// import './css/TodoCounter.css';
+// import './css/index.css'
+
+
+
+// function TodoCounter({total, completed}){
     
 
 
 
 
-    return(
-        <>
-        <h1 className='catamaran-500 TodoCounter '>
-        Has completado <span>{completed}</span> de <span>{total}</span> Todos
-        </h1>
-        </>
-    );
+//     return(
+//         <>
+//         <h1 className='catamaran-500 TodoCounter '>
+//         Has completado <span>{completed}</span> de <span>{total}</span> Todos
+//         </h1>
+//         </>
+//     );
 
-}
+// }
 
-export {TodoCounter}
+// export {TodoCounter}
