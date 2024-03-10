@@ -3,17 +3,20 @@ import './css/TodoSearch.css'
 
 
 
-function TodoSearch(){
-    
-    const [searchValue, setSarchValu] = React.useState ("");
-    
+function TodoSearch({
+    searchValue,
+    setSearchValue,
+}){
+           
     return(
         
         <input 
         className='BotonSearch montserrat-300'
         placeholder="¿Que quieres buscar?"
+        value={searchValue}
         onChange={(event) => {
-            console.log ("Escribiste en el TodoSearch");
+            setSearchValue(event.target.value);
+
         }
         }
 

@@ -2,11 +2,19 @@ import './css/TodoCounter.css';
 import './css/index.css'
 
 
-function TodoCounter({total, complited}){
+
+function TodoCounter({total, completed}){
+    
+
+
+
+
     return(
+        <>
         <h1 className='catamaran-500 TodoCounter '>
-        Has completado <span>{complited}</span> de <span>{total}</span> Todos
+        Has completado <span>{completed}</span> de <span>{total}</span> Todos
         </h1>
+        </>
     );
 
 }

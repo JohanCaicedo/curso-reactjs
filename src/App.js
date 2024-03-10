@@ -12,16 +12,30 @@ const defaultTodos = [
   { text: "Terminar curso React.js", completed: false },
   { text: "Hacer los cambios a la pagina de la red", completed: false },
   { text: "Hacer el portafolio", completed: false },
-  { text: "Hacer la ilustracón del 8M", completed: false },
+  { text: "Hacer la ilustración del 8M", completed: false },
 ];
 
 function App() {
+  const [todos, stetTodos] = React.useState(defaultTodos);
+  const completedTodos = todos.filter (
+    todo => !!todo.completed
+  ).length;
+  const totalTodos = todos.length;
+
+
+
+  const [searchValue, setSearchValue] = React.useState ("");
+  console.log('Los usuarios buscaron en ' + searchValue);
+  
   return (
     <React.Fragment>
       <div className="app-container">
         <div className="left-column">
-          <TodoCounter completed={16} total={60} />
-          <TodoSearch />
+          <TodoCounter completed={completedTodos} total={totalTodos} />
+          <TodoSearch
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          />
         </div>
         <div className="right-colum todo-list-container">
           <TodoList>
