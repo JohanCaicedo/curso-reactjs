@@ -1,4 +1,4 @@
-import "./css/TodoItem.css";
+import "../styles/TodoItem.css";
 import { MdCheckCircle } from "react-icons/md";
 import { MdHighlightOff } from "react-icons/md";
 

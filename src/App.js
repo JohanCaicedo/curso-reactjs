@@ -1,11 +1,11 @@
 import React from "react";
-import "./css/App.css";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { CreateTodoButton } from "./CreateTodoButton";
-import { TodoItem } from "./TodoItem";
-import "./css/index.css";
+import "./App.css";
+import { TodoCounter } from "./components/TodoCounter";
+import { TodoSearch } from "./components/TodoSearch";
+import { TodoList } from "./components/TodoList";
+import { CreateTodoButton } from "./components/CreateTodoButton";
+import { TodoItem } from "./components/TodoItem";
+import "./index.css";
 
 function useLocalStorage(itemName, initialValue) {
   const [item, setItem] = React.useState(() => {
