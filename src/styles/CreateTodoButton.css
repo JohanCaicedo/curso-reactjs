@@ -7,7 +7,13 @@
     height: 64px;
     color: white;
     cursor: pointer;
+
+}
+
+.overlayContainer{
+
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }

@@ -1,5 +1,5 @@
 .BotonSearch {
-  background: #f2e6d8;
+  background: #FCD7B2;
   border-radius: 10px;
   border: 2px solid #202329;
   margin: 0 24px;
@@ -7,19 +7,18 @@
   width: calc(100% - 62px);
   font-size: 24px;
   text-align: center;
-  font-family: Georgia;
-  font-weight: 400;
-  color: #0d0d0d;
+  font-weight: 800;
+  color: #0D0D0D;
   box-shadow: 0 5px 50px rgba(32, 35, 41, 0.25);
 }
 
 .BotonSearch:placeholder {
-  color: blue;
-  font-family: "Catamaran";
+  color: #a72d25;
   font-weight: 500;
   background: none;
 }
 
 .BotonSearch:focus {
-  outline-color: #61dafa;
+  outline: none; /* Elimina el contorno predeterminado al enfocar */
+  box-shadow: 0 0 10px #a72d25; /* Crea un resplandor alrededor del botón */
 }
