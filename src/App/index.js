@@ -1,31 +1,14 @@
 import React from "react";
-import "./App.css";
-import { TodoCounter } from "./components/TodoCounter";
-import { TodoSearch } from "./components/TodoSearch";
-import { TodoList } from "./components/TodoList";
-import { CreateTodoButton } from "./components/CreateTodoButton";
-import { TodoItem } from "./components/TodoItem";
-import "./index.css";
+import "../App.css";
+import { TodoCounter } from "../components/TodoCounter";
+import { TodoSearch } from "../components/TodoSearch";
+import { TodoList } from "../components/TodoList";
+import { CreateTodoButton } from "../components/CreateTodoButton";
+import { TodoItem } from "../components/TodoItem";
+import "../index.css";
+import { useLocalStorage } from "./useLocalStorage";
 
-function useLocalStorage(itemName, initialValue) {
-  const [item, setItem] = React.useState(() => {
-    const localStorageItem = localStorage.getItem(itemName);
-    if (!localStorageItem) {
-      const initialItem = initialValue;
-      localStorage.setItem(itemName, JSON.stringify(initialItem));
-      return initialItem;
-    } else {
-      return JSON.parse(localStorageItem);
-    }
-  });
 
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  };
-
-  return [item, saveItem];
-}
 
 function App() {
   const [todos, saveTodos] = useLocalStorage("Todos-v2", []);
